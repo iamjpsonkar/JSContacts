@@ -62,6 +62,9 @@ def buildFrame () :
 
   frame1 = Frame(root) # allow for selection of names
   frame1.pack()
+  btn6 = Button(frame1,text=" Exit ",command=root.destroy)
+  btn6.pack(side=BOTTOM)
+
   scroll = Scrollbar(frame1, orient=VERTICAL)
   select = Listbox(frame1, yscrollcommand=scroll.set, height=7)
   scroll.config (command=select.yview)
